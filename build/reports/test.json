@@ -1,0 +1,14 @@
+{
+  "input": "test",
+  "total_words": 141,
+  "total_sentences": 12,
+  "avg_sentence_length": 11.75,
+  "vocabulary_richness": 0.780,
+  "tone_base": 2,
+  "tone_weighted": 6.06,
+  "tone_label": "Positive",
+  "clarity_score": 75.00,
+  "clarity_signal": "High",
+  "leadership_signal": "Present",
+  "behaviour_pattern": "Decisive"
+}

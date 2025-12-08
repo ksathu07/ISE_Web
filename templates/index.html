@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISE - Identity Signature Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0a1a35, #1f3a70);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        header img {
+            height: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            resize: vertical;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4facfe;
+            background-image: linear-gradient(45deg, #00f2fe, #4facfe);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .report {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .report h2 {
+            margin-top: 0;
+            color: #00f2fe;
+        }
+        .field {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .field span {
+            font-weight: 700;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ISE - Identity Signature Engine</h1>
+            <div class="signature">by Sathursan Kamalanathan</div>
+    </header>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for msg in messages %}
+                <li style="color:#ff6b6b">{{ msg }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <label for="text_input">Paste your text here:</label>
+            <textarea name="text_input" id="text_input" placeholder="Enter text to analyze..."></textarea>
+            <br>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if report %}
+        <div class="report">
+            <h2>Analysis Report</h2>
+            <div class="field"><span>Input:</span> {{ report.input }}</div>
+            <div class="field"><span>Total Words:</span> {{ report.total_words }}</div>
+            <div class="field"><span>Total Sentences:</span> {{ report.total_sentences }}</div>
+            <div class="field"><span>Average Sentence Length:</span> {{ report.avg_sentence_length }}</div>
+            <div class="field"><span>Vocabulary Richness:</span> {{ report.vocabulary_richness }}</div>
+            <div class="field"><span>Base Tone:</span> {{ report.tone_base }} ({{ report.tone_label }})</div>
+            <div class="field"><span>Weighted Tone:</span> {{ report.tone_weighted }}</div>
+            <div class="field"><span>Clarity Score:</span> {{ report.clarity_score }}</div>
+            <div class="field"><span>Clarity Signal:</span> {{ report.clarity_signal }}</div>
+            <div class="field"><span>Leadership Signal:</span> {{ report.leadership_signal }}</div>
+            <div class="field"><span>Behaviour Pattern:</span> {{ report.behaviour_pattern }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

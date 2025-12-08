@@ -1,0 +1,14 @@
+{
+  "input": "temp_input",
+  "total_words": 335,
+  "total_sentences": 30,
+  "avg_sentence_length": 11.17,
+  "vocabulary_richness": 0.678,
+  "tone_base": 3,
+  "tone_weighted": 4.36,
+  "tone_label": "Highly Positive",
+  "clarity_score": 75.00,
+  "clarity_signal": "High",
+  "leadership_signal": "Absent",
+  "behaviour_pattern": "Collaborative"
+}
