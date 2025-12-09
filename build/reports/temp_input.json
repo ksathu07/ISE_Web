@@ -1,14 +1,14 @@
 {
   "input": "temp_input",
-  "total_words": 335,
-  "total_sentences": 30,
-  "avg_sentence_length": 11.17,
-  "vocabulary_richness": 0.678,
-  "tone_base": 3,
-  "tone_weighted": 4.36,
-  "tone_label": "Highly Positive",
-  "clarity_score": 75.00,
+  "total_words": 3,
+  "total_sentences": 1,
+  "avg_sentence_length": 3.00,
+  "vocabulary_richness": 1.000,
+  "tone_base": 0,
+  "tone_weighted": 2.00,
+  "tone_label": "Neutral",
+  "clarity_score": 90.00,
   "clarity_signal": "High",
   "leadership_signal": "Absent",
-  "behaviour_pattern": "Collaborative"
+  "behaviour_pattern": "Mixed"
 }
