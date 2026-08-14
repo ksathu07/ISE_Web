@@ -1,14 +1,14 @@
 {
   "input": "temp_input",
-  "total_words": 3,
-  "total_sentences": 1,
-  "avg_sentence_length": 3.00,
+  "total_words": 10,
+  "total_sentences": 2,
+  "avg_sentence_length": 5.00,
   "vocabulary_richness": 1.000,
   "tone_base": 0,
-  "tone_weighted": 2.00,
+  "tone_weighted": 2.50,
   "tone_label": "Neutral",
   "clarity_score": 90.00,
   "clarity_signal": "High",
-  "leadership_signal": "Absent",
-  "behaviour_pattern": "Mixed"
+  "leadership_signal": "Weak",
+  "behaviour_pattern": "Decisive"
 }
